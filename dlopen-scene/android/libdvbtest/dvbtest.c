@@ -39,7 +39,7 @@ void cmdMainMenu(void)
 	printf("	q.quit\n");
 }
 
-int main()
+int dvbtest()
 {
 	ULONG i =0;
 	UCHAR buf[256];
