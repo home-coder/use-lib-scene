@@ -1,4 +1,4 @@
-SUBDIR_MAKEFILES := $(call all-named-subdir-makefiles,modules tests)
+SUBDIR_MAKEFILES := $(call all-named-subdir-makefiles,libdvbtest)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -16,7 +16,5 @@ LOCAL_SRC_FILES += yang.c
 
 LOCAL_MODULE:= yang
 include $(BUILD_EXECUTABLE)
-#include $(BUILD_SHARED_LIBRARY)
-#
-#include $(SUBDIR_MAKEFILES)
 
+include $(SUBDIR_MAKEFILES)
