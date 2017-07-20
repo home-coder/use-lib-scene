@@ -27,3 +27,10 @@ Makefile变量解释
 　　wildcard : 扩展通配符
 　　notdir ： 去除路径
 　　patsubst ：替换通配符
+
+
+两点任务：
+在link的时候考虑，-L的指定方式为什么提示找不到动态库呢，而把库so导入/usr/lib就可以了呢。
+另外就是完善Makefile
+还有就是去usb那个仓，思考-L 和 /usr/lib产生的编译结果，运行时status为什么值不一样。
+
