@@ -8,7 +8,7 @@ DIR_LIB = ./dvbtest
 DIR_OBJ = ./obj
 DIR_BIN = ./bin
 LIB_INSTALL = ./lib
-
+export LD_LIBRARY_PATH:${LIB_INSTALL}:${LD_LIBRARY_PATH}
 PWD = $(shell pwd)
 
 #SRC = $(wildcard ${DIR_SRC}/*.c)
@@ -33,8 +33,11 @@ CFLAGS = -g -Wall -I${DIR_INC}
 #	@echo ${DIR_OBJ}/%.o:${DIR_SRC}/%.c
 #	$(CC) $(CFLAGS) -c  $< -o $@
 
-yang:${DIR_SRC}/yang.c libtest
-	gcc $< -o ${DIR_BIN}/yang -I ${DIR_INC} -L ${LIB_INSTALL} -ltest
+#如果没有办法通过 -L指定so的路径，那么就把so拷贝到/usr/lib/下面，这样make的时候就可以自动去那里找so了，但是比较不自由。
+all :yang libtest
+
+yang:${DIR_SRC}/yang.c 
+	gcc $< -o ${DIR_BIN}/yang -I ${DIR_INC}  -ltest
 
 libtest:${DIR_LIB}/test.c
 	gcc -fPIC -shared $< -o ${LIB_INSTALL}/libtest.so
