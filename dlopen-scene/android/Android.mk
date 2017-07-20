@@ -1,3 +1,4 @@
+#libdvbtest写到call里面
 SUBDIR_MAKEFILES := $(call all-named-subdir-makefiles,libdvbtest)
 
 LOCAL_PATH:= $(call my-dir)

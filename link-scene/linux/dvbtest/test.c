@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int test_open()
 {
 	printf("test_open\n");
