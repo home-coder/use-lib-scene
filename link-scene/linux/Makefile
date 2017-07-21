@@ -2,6 +2,22 @@
 #或者指定.bashrc中导入本地lib库的路径到环境变量export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:xxxxx/lib
 #demo  sudo cp libhello.so /usr/lib/
 #demo  gcc main.c -o main -lhello
+
+
+#├── bin
+#│   └── yang
+#├── dvbtest
+#│   └── test.c
+#├── include
+#│   └── test.h
+#├── lib
+#│   └── libtest.so
+#├── Makefile
+#└── src
+#    └── yang.c
+#
+#	5 directories, 6 files
+
 DIR_INC = ./include
 DIR_SRC = ./src
 DIR_LIB = ./dvbtest
