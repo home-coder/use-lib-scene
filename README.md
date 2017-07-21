@@ -11,6 +11,9 @@ c语言中很多形式的 库 的使用，场景化，标准化。以后直接�
 
 3 directories, 1 file
 
+###大前提, 无论dlopen 还是link 方式只是使用库的形式不同而已，大家编译一个动态共享库的方式是一样的 gcc test.c -o libtest.so -shared -fPIC
+
+
 #第一个问题？？？？
 上面动态库分为dlopen和link，而静态库貌似是不需要dlopen的，原因何在？
 原因：
