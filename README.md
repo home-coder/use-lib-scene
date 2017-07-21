@@ -42,3 +42,5 @@ Makefile变量解释
 
 
 
+在Makefile中，可以见到include src 等等目录结构很清晰，
+但是Android的标准是将一个功能放到一个目录下面，即将头文件.h 源.c等放到一个目录下面，然后这个目录起名字比如function，然后目录下添加Android.mk,与Makefile的区别很大
