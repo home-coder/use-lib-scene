@@ -60,5 +60,8 @@ Android和Ubuntu在源码的目录上有什么不同 ?
 
 新发现问题，虽然Android.mk中已经指定了 <LOCAL_MODULE_PATH> ，但是如果把这个目录放到源码system/下面 统一android的build.sh去编译，编译的结果并没有出现在/system/bin下面
 
-
-
+注意
+-----
+ mmm /home/jiangxiujie/github/use-lib-scene/link-scene/android/dvbtest
+ mmm /home/jiangxiujie/github/use-lib-scene/link-scene/android/function
+要按照先生成动态库，在生成可执行文件依赖动态库，这个编译顺序不能变，否则只能#include "test.h", 如果有了动态库就可以#include <test.h>
