@@ -1,0 +1,11 @@
+1: LOCAL_PATH := $(call my-dir)    
+	2: include $(CLEAR_VARS)    
+	3:      
+4: LOCAL_PREBUILT_LIBS := libA.a    /    
+5:                        libB.a    
+6:                             
+7: LOCAL_STATIC_LIBRARIES := libA    /    
+8:                         libB    
+9:      
+0: include $(BUILD_MULTI_PREBUILT)    
+
